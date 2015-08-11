@@ -3,7 +3,7 @@ This simple Node.js script monitors for any new Pushbullet-pushes and prints the
 
 ## Installation
 1. Install and configure your Pipsta according to the official instructions.
-2. Clone this repository: `git clone https://github.com/MarvinMenzerath/Pipsta-Pushbullet-Printer.git
+2. Clone this repository: `git clone https://github.com/MarvinMenzerath/Pipsta-Pushbullet-Printer.git`
 3. Copy those files from the official Pipsta-repository into the newly cloned directory:
 	- `Examples/1_Basic_Print/BasicPrint.py` --> `printText.py`
 	- `Examples/6_Banner_Print/banner.py` --> `printBanner.py`
