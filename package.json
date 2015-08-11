@@ -1,0 +1,17 @@
+{
+	"name": "Pipsta-Pushbullet-Printer",
+	"version": "1.0.0",
+	"private": true,
+	"author": {
+		"name": "Marvin Menzerath",
+		"email": "info@marvin-menzerath.de",
+		"url": "https://marvin-menzerath.de/"
+	},
+	"license": "MIT",
+	"scripts": {
+		"start": "node ./listener.js"
+	},
+	"dependencies": {
+		"pushbullet": "~1.4.3"
+	}
+}
