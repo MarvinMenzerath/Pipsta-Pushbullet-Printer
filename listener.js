@@ -74,8 +74,11 @@ stream.on("tickle", function(type) {
 				var dateTime = ("0" + date.getDate()).slice(-2) + "." + ("0" + (date.getMonth() + 1)).slice(-2) + "." + date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2) + ":" + ("0" + date.getSeconds()).slice(-2);
 
 				// build Push-data
-				var pushData = push.sender_name + "\n" + push.sender_email + "\n" + dateTime;
-				pushData += "\n--------------------------------";
+				var pushData = push.sender_name + "\n";
+				if (push.sender_email != undefined) {
+					pushData += push.sender_email + "\n";
+				}
+				pushData += dateTime + "\n--------------------------------";
 
 				var qrCodeData = null;
 				var imageData = null;
