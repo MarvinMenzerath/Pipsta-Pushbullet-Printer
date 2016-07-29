@@ -10,9 +10,14 @@ This simple Node.js script monitors for any new Pushbullet-pushes and prints the
 	- `Examples/7_QR_Print/qr.py` --> `printQr.py`
 	- `Examples/7_QR_Print/qr.py` --> `printQrForImage.py`
 	- `Examples/8_Image_Print/image_print.py` --> `printImage.py`
-4. Open all those Python-scripts and adjust the `FEED_PAST_CUTTER`-constant
+4. Open all those Python-scripts and adjust the `FEED_PAST_CUTTER`/`FEED_PAST_TEARBAR`-constant:
+	- `printText.py` --> `1`
+	- `printBanner.py`--> `8`
+	- `printQr.py` --> `5`
+	- `printQrForImage.py` --> `2`
+	- `printImage.py` --> `5`
 5. `npm install`
-6. Insert your Pushbullet-API-key into the `listener.js`-file
+6. Insert your Pushbullet-API-key into the `listener.js`-file.
 7. `npm start`
 
 Because of legal reasons my adjusted Pipsta-print-files are not included in this repository.
@@ -20,7 +25,7 @@ Because of legal reasons my adjusted Pipsta-print-files are not included in this
 ## License
 The MIT License (MIT)
 
-Copyright (c) 2015 Marvin Menzerath
+Copyright (c) 2015-2016 Marvin Menzerath
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
