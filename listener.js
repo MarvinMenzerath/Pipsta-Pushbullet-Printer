@@ -139,12 +139,14 @@ stream.on("tickle", function(type) {
 					printTextQrImage(pushData, qrCodeData, imageData);
 				}
 
-				// dismiss push
-				pb.updatePush(push.iden, { dismissed: true }, function(error, response) {
-					if (error) {
-						console.log("Unable to dismiss Push: " + error);
-					}
-				});
+				// dismiss push if it did not go to all devices
+				if (push.target_device_iden !== undefined) {
+					pb.updatePush(push.iden, { dismissed: true }, function(error, response) {
+						if (error) {
+							console.log("Unable to dismiss Push: " + error);
+						}
+					});
+				}
 
 				console.log("##############################");
 			}
