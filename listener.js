@@ -68,7 +68,7 @@ stream.on("tickle", function(type) {
 		} else {
 			var push = response.pushes[0];
 
-			if (push.target_device_iden === deviceToUse && !push.dismissed) {
+			if ((push.target_device_iden === deviceToUse || push.target_device_iden === undefined) && !push.dismissed) {
 				// build dateTime
 				var date = new Date(push.created * 1000);
 				var dateTime = ("0" + date.getDate()).slice(-2) + "." + ("0" + (date.getMonth() + 1)).slice(-2) + "." + date.getFullYear() + " " + ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2) + ":" + ("0" + date.getSeconds()).slice(-2);
